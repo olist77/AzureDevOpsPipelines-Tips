@@ -14,7 +14,9 @@ variables:
 
 steps:
 
-- task: TerraformInstaller@0
+- task: - task: TerraformInstaller@0
+  inputs:
+    terraformVersion: 'latest'@0
   displayName: install Terraform v0.12.28
   inputs:
     terraformVersion: '0.12.28'
