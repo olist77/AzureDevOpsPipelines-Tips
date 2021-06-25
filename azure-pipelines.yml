@@ -10,6 +10,10 @@ pool:
 variables:
   subscription: Visual Studio Enterprise(759b32b5-9953-4295-bce6-66d25b6f9ffd)
   resourceGroup: resourcegroup-tfstate
+- task: TerraformTaskV2@2
+  inputs:
+    provider: 'azurerm'
+    command: 'init'
   storageAccount: terraformtfstateskip77
   container: tfstate
   tfstateFile: terraform.tfstate
